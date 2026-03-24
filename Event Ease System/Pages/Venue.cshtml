@@ -1,0 +1,35 @@
+﻿@page
+@model Event_Ease_System.Pages.VenueModel
+@{
+}
+
+<h3>Please Enter Venue Details </h3>
+
+@if (Model.hasData)
+{
+    <p>This booking has been successfully submitted</p>
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="vname">Venue Name</label><br>
+        <input type="text" id="vname" name="venuename"><br>
+
+        <label for="vlocation">Venue Location</label><br>
+        <input type="text" id="vlocation" name="venuelocation"><br>
+
+        <label for="vcapacity">Venue Capacity</label><br>
+        <input type="text" id="vcapacity" name="venuecapacity"><br>
+
+        <label for="message"> Message</label><br>
+        <text id="message" name="message" style="height:200px">
+        </textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+    <div class="text-center">
+        <h1Venue Images</h1>
+            <p>View venue pictures here<a href="https://www.saweddings.co.za/articles/inspiration-51/articles-interviews-55/beautiful-ocean-facing-wedding-venues"> Click link.</a></p>
+        </div>

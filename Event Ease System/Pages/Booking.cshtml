@@ -1,0 +1,37 @@
+﻿@page
+@model Event_Ease_System.Pages.BookingModel
+@{
+}
+
+<h3>Please Enter Booking Information</h3>
+
+@if(Model.hasData)
+{
+    <p>Booking for @Model.firstName @Model.lastName has been submitted successfully.</p>
+    <p>Please proceed to the Event Page</p>
+    <p>@Model.message</p>
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lastname"><br>
+
+        <label for="email">Email Address</label><br>
+        <input type="text" id="email" name="emailaddress"><br>
+
+        <label for="number">Phone Number</label><br>
+        <input type="text" id="number" name="phonenumber"><br>
+
+        <label for="date">Booking Date</label><br>
+        <input type="text" id="date" name="bookingdate"><br>
+
+        <label for="message">Message</label><br>
+        <text id="message" name="message" style="height:200px"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>

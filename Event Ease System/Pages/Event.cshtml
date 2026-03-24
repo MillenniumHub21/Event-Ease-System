@@ -1,0 +1,34 @@
+﻿@page
+@model Event_Ease_System.Pages.EventModel
+@{
+}
+
+<h3>Please Enter Event Information</h3>
+
+@if (Model.hasData)
+{
+    <p>Please proceed to the Venue Page</p>
+    <p>@Model.message</p>
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="type">Event Type</label><br>
+        <input type="text" id="name" name="eventtype"><br>
+
+        <label for="date">Event Date</label><br>
+        <input type="text" id="date" name="eventdate"><br>
+
+        <label for="description">Event Description</label><br>
+        <input type="text" id="description" name="eventdescription"><br>
+
+        <label for="location">Event Location</label><br>
+        <input type="text" id="location" name="eventlocation"><br>
+
+        <label for="message"> Message</label><br>
+        <text id="message" name="message" style="height:200px">
+        </textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
